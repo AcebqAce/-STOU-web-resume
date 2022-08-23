@@ -1,107 +1,233 @@
 * {
-  margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
 }
-.background-image {
-  background-color: #ffb6a9;
-  background-image: url(/img/workspace.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
+body {
+  overflow-x: hidden;
+}
+.main-width {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+.hero {
   width: 100%;
-  height: 100vh;
-}
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 4.2%;
-  padding-left: 4.2%;
-  padding-right: 4.2%;
-}
-.logo {
-  color: #ffffff;
-  font-size: 35;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-span {
-  color: #d5fe77;
-}
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 4px 20px;
-}
-nav ul li a {
-  color: royalblue;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-nav ul li a:hover {
-  color: #d5fe77;
-  transition: 1s;
-}
-.btn {
-  background-color: aqua;
-  text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  padding: 10px 25px;
-  border-radius: 30px;
-  transition: transform 0.4s;
-}
-.btn:hover {
-  transform: scale(1.2);
-}
-.summary {
-  position: absolute;
-  top: 50%;
-  left: 4.2%;
-  transform: translateY(-50%);
-}
-h1 {
-  color: #03c03c;
-  margin: 20px 0px 20px;
-  font-size: 50px;
-}
-h3 {
-  color: #03c03c;
-  margin: 25px;
-  margin-bottom: 50px;
-  font-size: 30px;
-}
-h4 {
-  color: #00c9a7;
-  letter-spacing: 2px;
-  font-size: 20px;
-}
-.newsletter form {
-  width: 380px;
-  max-width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/img/working.jpg);
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
-.newsletter form input:first-child {
-  display: inline-block;
-  width: 100%;
-  padding: 14px 130px 14px 15px;
-  border: 2px solid #d5fe77;
-  outline: none;
-  border-radius: 30px;
+header {
+  padding: 40px 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
-.newsletter form input:last-child {
+.logo i {
+  height: 55px;
+  width: 55px;
+  background: transparent;
+  border: 2px solid #b6f76b;
+  color: #b6f76b;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+nav .hamb {
+  width: 35px;
+  height: 24px;
+  right: 3%;
+  top: 60px;
+  z-index: 5;
+  background: transparent;
   position: absolute;
+  cursor: pointer;
+  display: none;
+}
+nav .hamb span {
+  display: block;
+  background: #b6f76b;
+  width: 100%;
+  height: 3px;
+  transition: 3s;
+  transition-property: transforms, opacity;
+}
+nav .hamb span:nth-child(2) {
+  margin: 7px 0px;
+}
+nav .nav-list {
+  list-style: none;
+}
+nav .nav-list li {
   display: inline-block;
-  outline: none;
-  border: none;
-  padding: 10px 30px;
+}
+nav .nav-list li a {
+  display: inline-block;
+  color: white;
+  margin-left: 55px;
+  font-size: 15px;
+  font-weight: 600;
+}
+nav .nav-list li:not(:last-child) a:hover {
+  color: #b6f76b;
+  transition: 4s;
+}
+nav .nav-list li.button a {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #b6f76b;
+  padding: 9px 28px;
   border-radius: 30px;
-  background-color: #d5fe77;
-  color: aliceblue;
-  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-  top: 6px;
-  right: 6px;
+  line-height: 1.3;
+  color: #b6f76b;
+  font-weight: 500;
+}
+nav .nav-list li.button:hover a {
+  background: #b6f76b;
+  color: white;
+  border: 2px solid transparent;
+  transition: 0.4s;
+}
+.container {
+  padding-top: 130px;
+}
+.container .hero-text {
+  margin-bottom: 40px;
+}
+.container .hero-text h1 {
+  color: white;
+  font-size: 47px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 20px 0px 20px;
+}
+span {
+  color: #b6f76b;
+}
+.container .hero-text h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 17px;
+}
+.container .hero-text p {
+  width: 440px;
+  max-width: 100%;
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.social a {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 35px;
+}
+.social a:hover {
+  transform: scale(1.1);
+  background: #b6f76b;
+  transition: 0.4s;
+}
+.container .hero-text button {
+  color: white;
+  background: #b6f76b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 8px 30px;
+  border: 2px solid #b6f76b;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.container .hero-text button:hover {
+  background: transparent;
+  border: 2px solid #b6f76b;
+  color: #b6f76b;
+  transition: 0.4s;
+}
+.bottom {
+  margin-top: 243px;
+  padding-bottom: 40px;
+}
+.bottom p {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+@media screen and (max-width: 930px) {
+  nav .hamb {
+    display: initial;
+  }
+  .click {
+    top: 46px;
+  }
+  .click span {
+    position: absolute;
+    margin-top: 12px;
+  }
+  .click span:first-child {
+    transform: rotate(-40deg);
+  }
+  .click span:nth-child(2) {
+    opacity: 0;
+    margin: 0;
+  }
+  .click span:last-child {
+    transform: rotate(40deg);
+    top: 0;
+  }
+  nav .nav-list {
+    position: absolute;
+    top: 90px;
+    right: -65%;
+    bottom: 0;
+    width: 60%;
+    height: 50%;
+    background: black;
+    z-index: 2;
+    padding: 6% 9%;
+    transition: 0.3s right;
+    border-radius: 10px;
+  }
+  nav .nav-list li {
+    display: block;
+  }
+  nav .nav-list li a {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  nav .nav-list li.button a {
+    position: absolute;
+    bottom: 0%;
+    right: 20%;
+    left: 20%;
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+  nav .nav-list.open {
+    right: 0;
+  }
 }
